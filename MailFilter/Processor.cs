@@ -46,6 +46,7 @@ namespace MailFilter
                 yield return new TagFilterModuleFactory();
                 yield return new PostDiscourseModuleFactory();
                 yield return new ForwardModuleFactory();
+                yield return new DayTimeFilterModuleFactory();
             }
         }
 
