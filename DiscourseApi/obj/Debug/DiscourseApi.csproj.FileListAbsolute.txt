@@ -1,0 +1,10 @@
+/Dev/Code/MailFilter/DiscourseApi/obj/Debug/DiscourseApi.csprojAssemblyReference.cache
+/Dev/Code/MailFilter/DiscourseApi/obj/Debug/DiscourseApi.csproj.CoreCompileInputs.cache
+/Dev/Code/MailFilter/DiscourseApi/bin/Debug/DiscourseApiLib.dll
+/Dev/Code/MailFilter/DiscourseApi/bin/Debug/DiscourseApiLib.pdb
+/Dev/Code/MailFilter/DiscourseApi/bin/Debug/BouncyCastle.Crypto.dll
+/Dev/Code/MailFilter/DiscourseApi/bin/Debug/Newtonsoft.Json.dll
+/Dev/Code/MailFilter/DiscourseApi/bin/Debug/Newtonsoft.Json.xml
+/Dev/Code/MailFilter/DiscourseApi/obj/Debug/DiscourseApi.csproj.CopyComplete
+/Dev/Code/MailFilter/DiscourseApi/obj/Debug/DiscourseApiLib.dll
+/Dev/Code/MailFilter/DiscourseApi/obj/Debug/DiscourseApiLib.pdb

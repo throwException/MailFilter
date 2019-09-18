@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailFilter", "MailFilter\MailFilter.csproj", "{259588E5-8BB6-4AD5-9E3D-081EAFD323FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscourseApi", "DiscourseApi\DiscourseApi.csproj", "{7F497285-D30E-446C-AF52-BC91C5612739}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{259588E5-8BB6-4AD5-9E3D-081EAFD323FC}.Debug|x86.ActiveCfg = Debug|x86
+		{259588E5-8BB6-4AD5-9E3D-081EAFD323FC}.Debug|x86.Build.0 = Debug|x86
+		{259588E5-8BB6-4AD5-9E3D-081EAFD323FC}.Release|x86.ActiveCfg = Release|x86
+		{259588E5-8BB6-4AD5-9E3D-081EAFD323FC}.Release|x86.Build.0 = Release|x86
+		{7F497285-D30E-446C-AF52-BC91C5612739}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7F497285-D30E-446C-AF52-BC91C5612739}.Debug|x86.Build.0 = Debug|Any CPU
+		{7F497285-D30E-446C-AF52-BC91C5612739}.Release|x86.ActiveCfg = Release|Any CPU
+		{7F497285-D30E-446C-AF52-BC91C5612739}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
