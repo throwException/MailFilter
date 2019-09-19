@@ -15,7 +15,7 @@ namespace MailFilter
 {
     public class HeaderFilterModuleConfig : Config
     {
-        public HeaderId HeaderId { get; set; }
+        public string Field { get; set; }
         public string ValuePattern { get; set; }
 
         public HeaderFilterModuleConfig()
@@ -34,7 +34,7 @@ namespace MailFilter
         {
             get
             {
-                yield return new ConfigItemString("HeaderId", v => HeaderId = (HeaderId)Enum.Parse(typeof(HeaderId), v));
+                yield return new ConfigItemString("Field", v => Field = v);
                 yield return new ConfigItemString("ValuePattern", v => ValuePattern = v);
             }
         }
@@ -54,7 +54,7 @@ namespace MailFilter
         public override Tuple<ModuleResult, MimeMessage> Execute(IMessageSummary summary, MimeMessage message)
         {
             if (message.Headers
-                .Any(h => h.Id == _config.HeaderId && Regex.IsMatch(h.Value, _config.ValuePattern)))
+                .Any(h => h.Field == _config.Field && Regex.IsMatch(h.Value, _config.ValuePattern)))
             {
                 return new Tuple<ModuleResult, MimeMessage>(ModuleResult.Continue, message);
             }
