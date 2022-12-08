@@ -33,6 +33,7 @@ namespace MailFilter
         public string MailAccountName { get; set; }
         public string MailAccountPassword { get; set; }
         public string SystemMailAddress { get; private set; }
+        public string SystemMailName { get; private set; }
 
         public override IEnumerable<ConfigItem> ConfigItems
         {
@@ -43,6 +44,7 @@ namespace MailFilter
                 yield return new ConfigItemString("MailAccountName", v => MailAccountName = v);
                 yield return new ConfigItemString("MailAccountPassword", v => MailAccountPassword = v);
                 yield return new ConfigItemString("SystemMailAddress", v => SystemMailAddress = v);
+                yield return new ConfigItemString("SystemMailName", v => SystemMailName = v);
             }
         }
     }

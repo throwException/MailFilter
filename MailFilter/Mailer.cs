@@ -58,7 +58,7 @@ namespace MailFilter
 
         public void Send(InternetAddress to, string subject, Multipart content)
         {
-            Send(new MailboxAddress(_config.SystemMailAddress), to, subject, content);
+            Send(new MailboxAddress(_config.SystemMailName, _config.SystemMailAddress), to, subject, content);
         }
 
         public void Send(InternetAddress from, InternetAddress to, string subject, Multipart content)
@@ -78,7 +78,7 @@ namespace MailFilter
                 client.Authenticate(_config.MailAccountName, _config.MailAccountPassword);
                 _log.Verbose("Connected to mail server {0}:{1}", _config.SmtpServerHost, _config.SmtpServerPort);
 
-                client.Send(message, new MailboxAddress(_config.SystemMailAddress), tos);
+                client.Send(message, new MailboxAddress(_config.SystemMailName, _config.SystemMailAddress), tos);
                 _log.Info("Message sent to {0}", string.Join(", ", tos.Select(a => a.Address)));
             }
             catch (Exception exception)

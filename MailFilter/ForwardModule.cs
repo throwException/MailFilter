@@ -16,7 +16,8 @@ namespace MailFilter
     public class ForwardModuleConfig : Config
     {
         public ConfigSectionSmtp Smtp { get; private set; }
-        public string Recipient { get; private set; }
+        public string RecipientName { get; private set; }
+        public string RecipientAddress { get; private set; }
 
         public ForwardModuleConfig()
         {
@@ -35,7 +36,8 @@ namespace MailFilter
         {
             get
             {
-                yield return new ConfigItemString("Recipient", v => Recipient = v);
+                yield return new ConfigItemString("RecipientName", v => RecipientName = v);
+                yield return new ConfigItemString("RecipientAddress", v => RecipientAddress = v);
             }
         }
     }
@@ -55,7 +57,7 @@ namespace MailFilter
 
         public override Tuple<ModuleResult, MimeMessage> Execute(IMessageSummary summary, MimeMessage message)
         {
-            _mailer.Send(message, new MailboxAddress(_config.Recipient));
+            _mailer.Send(message, new MailboxAddress(_config.RecipientName, _config.RecipientAddress));
 
             return new Tuple<ModuleResult, MimeMessage>(ModuleResult.Continue, message);
         }
